@@ -1,0 +1,20 @@
+{
+  "name": "paypal",
+  "version": "1.0.0",
+  "description": "Basic Credit Card Processing",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "author": "kinjal jha",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "7.29.0",
+    "jest": "27.0.5"
+  },
+  "transform": {},
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
