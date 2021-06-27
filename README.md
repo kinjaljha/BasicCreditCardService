@@ -34,6 +34,25 @@ Enter the project folder
 ```sh
 node src/index.js
 ```
+Once it is up enter either the data file path or data itself. 
+
+Test it with available input file
+```sh
+assets/input.txt
+```
+OR
+Dump data, followed by **eoi** 
+```
+Add Tom 4111111111111111 $1000
+Add Lisa 5454545454545454 $3000
+Add Quincy 1234567890123456 $2000
+Charge Tom $350
+Charge Tom $800
+Charge Lisa $7
+Credit Lisa $100
+Credit Quincy $200
+eoi
+```
 
 For testing
 
@@ -43,7 +62,7 @@ $ npm test
 
 ## Inputs Allowed
 
-- _txt_ file name eg input.txt
+- _txt_ file name eg _input.txt_
 - stdin in transaction format with (eoi - end of input)
 
 ```sh
