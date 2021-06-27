@@ -86,13 +86,12 @@ describe("Transaction Mapper", () => {
     limit = 500;
     balance = 1000;
 
-    const mapper = new TransactionMapper();
-    await mapper.add(user, creditCardNumber, limit);
-    await mapper.charge(user, balance);
+    await transactionMapper.add(user, creditCardNumber, limit);
+    await transactionMapper.charge(user, balance);
 
     const transactionMap = objectToDataMap(
       user,
-      mapper.getUserTransaction(user)
+      transactionMapper.getUserTransaction(user)
     );
     const expectedTransactionMap = objectToDataMap(
       user,
