@@ -62,7 +62,7 @@ $ npm test
 
 ## Inputs Allowed
 
-- _txt_ file name eg _input.txt_
+- _txt_ file path eg _storage/data/input.txt_
 - stdin in transaction format with (eoi - end of input)
 
 ```sh
