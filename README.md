@@ -5,7 +5,7 @@
 - Two classes **Transaction** and **TransactionMapper** in _handlers_
     - Each class properties are protected
     - For TransactionMapper functions add, charge and credit methods, async await is used to maintain synchronous flow for future API additions.
-- Map is used to maintain user transactions.
+- Map is used to maintain user transactions
     - Map cannot be used directly from anywhere, it can be used only by TransactionMapper getter
 - _Utils_ include the helper functions like file read, luhn10 algorithm, etc
 - _types.js_ include the enums and constants for one place future updatations
@@ -23,7 +23,7 @@ In command line enter following command
 
 ```sh
 git clone https://github.com/kinjaljha/BasicCreditCardService.git
-cd CreditCardService
+cd BasicCreditCardService
 npm i
 ```
 
@@ -32,7 +32,26 @@ npm i
 Enter the project folder
 
 ```sh
-node index.js
+node src/index.js
+```
+Once it is up enter either the data file path or data itself. 
+
+Test it with available input file
+```sh
+assets/input.txt
+```
+OR
+Dump data, followed by **eoi** 
+```
+Add Tom 4111111111111111 $1000
+Add Lisa 5454545454545454 $3000
+Add Quincy 1234567890123456 $2000
+Charge Tom $350
+Charge Tom $800
+Charge Lisa $7
+Credit Lisa $100
+Credit Quincy $200
+eoi
 ```
 
 For testing
@@ -43,7 +62,7 @@ $ npm test
 
 ## Inputs Allowed
 
-- _txt_ file name eg input.txt
+- _txt_ file path eg _storage/data/input.txt_
 - stdin in transaction format with (eoi - end of input)
 
 ```sh
